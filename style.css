@@ -29,6 +29,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    text-decoration: none;
 }
 
 .header-logo span {
@@ -36,6 +37,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     margin-left: 6px;
+    color: rgba(10, 20, 58, 1);
 }
 
 .header-controls {
@@ -197,6 +199,79 @@ body {
     margin-bottom: 23px;
 }
 
+.content-side__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 25px;
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+}
+
+.content-side__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content-side__list-item--title {
+    margin-top: 7px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.content-side__list-item--text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.content-side__footer {
+    display: flex;
+    flex-direction: column;
+    color: rgba(196, 196, 196, 1);
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.content-side__footer--href-item {
+    color: rgba(196, 196, 196, 1);
+}
+
+.content-product {
+    display: flex;
+    flex-grow: 1;
+    gap: 30px;
+}
+
+.content-product__left {
+    flex-basis: 50%;
+}
+
+.content-product__right {
+    flex-basis: 50%;
+}
+
+.content-product__title,
+.content-product__price {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.content-product__img {
+    width: 100%;
+}
+
+.content-product__text {
+    color: rgba(10, 20, 58, 1);
+}
+
+
 
 @media (max-width: 1200px) {
     .container {
@@ -219,11 +294,24 @@ body {
 
     .content-side {
         width: 100%;
-        min-width: none;
+        min-width: 0;
     }
 
     .content-main {
         width: 100%;
+    }
+
+    .content-product {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content-product__left {
+        flex-basis: 100%;
+    }
+
+    .content-product__right {
+        flex-basis: 100%;
     }
 }
 
